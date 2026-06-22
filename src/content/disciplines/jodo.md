@@ -2,11 +2,11 @@
 name: "Jodo"
 slug: "jodo"
 logo: "/uploads/disciplines/jodo.jpg"
-summary: "La voie du baton est un art martial traditionnel japonais inventé au XVIIe siècle. Il enseigne le maniement du bâton (jo) pour se défendre face à un sabre (bokken)."
+summary: "Le jodo (杖道, « voie du baton ») est un art martial traditionnel japonais inventé au XVIIe siècle. Il enseigne le maniement du bâton (jo) pour se défendre face à un sabre (bokken)."
 coordinator: "Olivier Bayart"
 contact: "Jodolille@gmail.com"
 schedule: "Jeudis 20h-21h30 | Vendredis 20h-22h"
-order: 6
+order: 2
 draft: false
 ---
 

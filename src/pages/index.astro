@@ -2,8 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroSection from "../components/Sections/HeroSection.astro";
 import EventList from "../components/Sections/EventList.astro";
-import SermonList from "../components/Sections/SermonList.astro";
 import Button from "../components/UI/Button.astro";
+import JoinUs from "../components/Sections/JoinUs.astro";
+import PostList from "../components/Sections/PostList.astro";
+import siteData from "../content/siteData";
 ---
 
 <BaseLayout>
@@ -12,7 +14,7 @@ import Button from "../components/UI/Button.astro";
     subtitle="Une passion qui nous unit"
     backgroundImage="/uploads/hero-bg.webp"
     ctaText="Décrouvrir le Dojo"
-    ctaLink="/about-us"
+    ctaLink="/dojo"
     secondaryCtaText="Explorer nos disciplines"
     secondaryCtaLink="/disciplines"
   />
@@ -20,8 +22,8 @@ import Button from "../components/UI/Button.astro";
   <!-- Events Section -->
   <EventList />
 
-  <!-- Sermons Section -->
-  <SermonList />
+  <!-- Post Section -->
+  <PostList />
 
   <!-- Service Times -->
   <section class="py-16 bg-primary-50">
@@ -32,22 +34,18 @@ import Button from "../components/UI/Button.astro";
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
             <h3 class="text-xl font-bold mb-3">Kendo</h3>
-            <p class="text-2xl font-bold text-primary-600 mb-2">8:00 à 10:00</p>
-            <p class="text-gray-600 mb-4">Lundis et mardis</p>
-            <p class="italic text-gray-500">Salle habituelle</p>
+            <p class="text-2xl font-bold text-primary-600 mb-2">{siteData.schedules.kendo.time}</p>
+            <p class="text-gray-600 mb-4">{siteData.schedules.kendo.days}</p>
+            <p class="italic text-gray-500">{siteData.schedules.kendo.location}</p>
           </div>
           
           <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
             <h3 class="text-xl font-bold mb-3">Iaïdo</h3>
-            <p class="text-2xl font-bold text-primary-600 mb-2">10:30 à 12:00</p>
-            <p class="text-gray-600 mb-4">Mercredis et jeudis</p>
-            <p class="italic text-gray-500">Salle habituelle</p>
+            <p class="text-2xl font-bold text-primary-600 mb-2">{siteData.schedules.iaido.time}</p>
+            <p class="text-gray-600 mb-4">{siteData.schedules.iaido.days}</p>
+            <p class="italic text-gray-500">{siteData.schedules.iaido.location}</p>
           </div>
         </div>
-        
-        <Button href="/im-new" variant="outline">
-          Décrouvrir le dojo
-        </Button>
       </div>
     </div>
   </section>
@@ -117,7 +115,7 @@ import Button from "../components/UI/Button.astro";
               <div>
                 <h4 class="font-bold mb-2">Métro</h4>
                 <p class="text-gray-700">
-                  Ligne 2 (rouge) - Station "Marie de Lille", puis 10 minutes à pied<br>
+                  Ligne 2 (rouge) - Station "Lille Grand Palais", puis 5 minutes à pied<br>
                 </p>
               </div>
               
@@ -130,7 +128,7 @@ import Button from "../components/UI/Button.astro";
             </div>
             
             <div class="mt-6">
-              <Button href="https://maps.google.com/?q=123+Main+Street,+Anytown,+ST+12345" target="_blank" variant="primary">
+              <Button href={siteData.contact.mapsUrl} target="_blank" variant="primary">
                 Itinéraires
               </Button>
             </div>
@@ -181,28 +179,5 @@ import Button from "../components/UI/Button.astro";
       </div>
     </div>
   </section>
-  <!-- Call to Action -->
-  <section 
-    class="py-20 bg-cover bg-center text-white"
-    style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/uploads/ministries-header-bg.webp)"
-  >
-    <div class="container">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Envie de nous rejoindre ?</h2>
-        <p class="text-xl mb-8">
-          Si vous êtes intéressé par nos activités ou si vous avez des questions, n'hésitez pas à nous contacter !
-        </p>
-        
-        <div class="flex flex-wrap justify-center gap-4">
-          <Button href="/im-new" variant="primary" size="lg">
-            En savoir plus sur notre équipe
-          </Button>
-          
-          <Button href="/contact" variant="outline" size="lg" class="bg-white/10 text-white border-white hover:bg-white hover:text-gray-900 backdrop-blur-sm">
-            Nous contacter
-          </Button>
-        </div>
-      </div>
-    </div>
-  </section>
+  <JoinUs />
 </BaseLayout>

@@ -94,6 +94,21 @@ const blogCollection = defineCollection({
   }),
 });
 
+const postCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    slug: z.string().optional(),
+    pubDate: z.date(),
+    description: z.string(), // Short description for previews
+    author: z.string().default("Administrateur"),
+    // Use the same simple uploaded path format, under `/uploads/posts/`
+    image: z.string().startsWith('/uploads/posts/').optional(),
+    tags: z.array(z.string()).default(["general"]),
+    draft: z.boolean().default(false),
+  }),
+});
+
 const siteInfoCollection = defineCollection({
   type: 'content', // Could be 'data' if only frontmatter is needed
   schema: z.object({
@@ -108,5 +123,6 @@ export const collections = {
   // ministries: ministriesCollection,
   disciplines: disciplinesCollection,
   blog: blogCollection,
+  post: postCollection,
   siteInfo: siteInfoCollection,
 };

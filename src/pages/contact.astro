@@ -1,21 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHeader from "../components/Sections/PageHeader.astro";
-import Button from "../components/UI/Button.astro";
+import StaffList from "../components/Sections/StaffList.astro";
+import { getCollection } from 'astro:content';
+
+const disciplines = await getCollection('disciplines');
 ---
 
 <BaseLayout>
   <PageHeader 
-    title="Contact Us" 
-    subtitle="We'd love to hear from you"
+    title="Nous contacter" 
     backgroundImage="/uploads/contact-header-bg.webp"
   />
   
   <!-- Contact Information -->
-  <section class="py-16">
+  <!-- <section class="py-16">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Contact Form -->
         <div>
           <h2 class="text-3xl font-bold mb-6">Send Us a Message</h2>
           
@@ -95,13 +96,12 @@ import Button from "../components/UI/Button.astro";
               
               // In a real implementation, you would handle the form submission here
               // For this template, we'll just show a success message
-              alert('Thank you for your message! We will get back to you soon.');
+              alert('Ceci ne fonctionne pas : A implémenter');
               this.reset();
             });
           </script>
         </div>
         
-        <!-- Contact Information -->
         <div>
           <h2 class="text-3xl font-bold mb-6">Contact Information</h2>
           
@@ -179,7 +179,6 @@ import Button from "../components/UI/Button.astro";
             </div>
           </div>
           
-          <!-- Social Media Links -->
           <div class="mt-8">
             <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
             <div class="flex space-x-4">
@@ -208,170 +207,49 @@ import Button from "../components/UI/Button.astro";
         </div>
       </div>
     </div>
-  </section>
-  
-  <!-- Map Section -->
-  <section class="py-16 bg-gray-50">
-    <div class="container">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Location & Directions</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          We're easy to find in the heart of Anytown
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div class="bg-gray-200 rounded-lg overflow-hidden h-96">
-          <!-- Placeholder for Google Maps iframe -->
-          <div class="w-full h-full flex items-center justify-center bg-gray-300">
-            <p class="text-gray-600 text-center p-4">
-              Google Maps embed would go here<br>
-              <span class="text-sm">(For privacy reasons, not included in the template)</span>
-            </p>
-          </div>
-        </div>
-        
-        <div>
-          <div class="bg-white p-8 rounded-lg shadow-md">
-            <h3 class="text-xl font-bold mb-4">Getting Here</h3>
-            
-            <div class="space-y-6">
-              <div>
-                <h4 class="font-bold mb-2">By Car</h4>
-                <p class="text-gray-700">
-                  We have a large parking lot with plenty of free parking spaces, including accessible parking near the main entrance.
-                </p>
-              </div>
-              
-              <div>
-                <h4 class="font-bold mb-2">Public Transportation</h4>
-                <p class="text-gray-700">
-                  Bus lines 10 and 14 stop directly in front of our building. The nearest subway station is Central Station, a 10-minute walk from our church.
-                </p>
-              </div>
-              
-              <div>
-                <h4 class="font-bold mb-2">Accessibility</h4>
-                <p class="text-gray-700">
-                  Our building is fully accessible with ramp access at the main entrance and elevator access to all floors. Accessible restrooms are available on each floor.
-                </p>
-              </div>
-            </div>
-            
-            <div class="mt-6">
-              <Button href="https://maps.google.com/?q=123+Main+Street,+Anytown,+ST+12345" target="_blank" variant="primary">
-                Get Directions
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </section> -->
   
   <!-- Staff Contact -->
-  <section id="prayer" class="py-16">
+  <section id="prayer" class="py-16 bg-gray-50">
     <div class="container">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ministry Contacts</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Need to reach a specific ministry or staff member? Here's who to contact
-        </p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Contacts par section</h2>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-2">Pastoral Care</h3>
-          <p class="text-gray-700 mb-4">
-            For spiritual counseling, hospital visits, or prayer requests
-          </p>
-          <div class="flex items-center text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <a href="mailto:pastor@churchname.org" class="text-primary-600 hover:text-primary-700">
-              pastor@churchname.org
-            </a>
+
+        {disciplines.map((d) => (
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold mb-2">Section {d.data.name}</h3>
+            <div class="mb-3 flex items-center text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <span>{d.data.coordinator}</span>
+            </div>
+            <div class="flex items-center text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href={`mailto:${d.data.contact}`} class="text-primary-600 hover:text-primary-700">
+                {d.data.contact}
+              </a>
+            </div>
           </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-2">Children's Ministry</h3>
-          <p class="text-gray-700 mb-4">
-            For questions about programs for children from birth through 5th grade
-          </p>
-          <div class="flex items-center text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <a href="mailto:children@churchname.org" class="text-primary-600 hover:text-primary-700">
-              children@churchname.org
-            </a>
-          </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-2">Youth Ministry</h3>
-          <p class="text-gray-700 mb-4">
-            For questions about programs for students in 6th-12th grade
-          </p>
-          <div class="flex items-center text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <a href="mailto:youth@churchname.org" class="text-primary-600 hover:text-primary-700">
-              youth@churchname.org
-            </a>
-          </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-2">Worship Ministry</h3>
-          <p class="text-gray-700 mb-4">
-            For information about our music and creative arts ministries
-          </p>
-          <div class="flex items-center text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <a href="mailto:worship@churchname.org" class="text-primary-600 hover:text-primary-700">
-              worship@churchname.org
-            </a>
-          </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-2">Outreach & Missions</h3>
-          <p class="text-gray-700 mb-4">
-            For information about our local and global mission initiatives
-          </p>
-          <div class="flex items-center text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <a href="mailto:outreach@churchname.org" class="text-primary-600 hover:text-primary-700">
-              outreach@churchname.org
-            </a>
-          </div>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-2">Admin & Facilities</h3>
-          <p class="text-gray-700 mb-4">
-            For building use, scheduling, and administrative questions
-          </p>
-          <div class="flex items-center text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <a href="mailto:admin@churchname.org" class="text-primary-600 hover:text-primary-700">
-              admin@churchname.org
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
   
   
+  <section id="prayer" class="py-16 bg-primary-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Direction du club</h2>
+      </div>
+      
+        <!-- <StaffList /> -->
+    </div>
+  </section>
+
 </BaseLayout>

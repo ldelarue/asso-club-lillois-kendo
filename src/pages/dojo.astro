@@ -1,0 +1,188 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/Sections/PageHeader.astro";
+import StaffList from "../components/Sections/StaffList.astro";
+import JoinUs from "../components/Sections/JoinUs.astro";
+---
+
+<BaseLayout
+  title="Le Dojo"
+>
+  <PageHeader 
+    title="Le Dojo" 
+    backgroundImage="/uploads/dojo-header-bg.webp"
+  />
+  
+  <!-- Contact Staff CTA -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+          <p class="text-xl text-gray-700 mb-8">
+            Nam libero nisi, molestie quis vehicula at, aliquet id odio. Ut a erat eu est tincidunt consectetur. Praesent ac facilisis libero, sit amet laoreet urna.
+          </p>
+          
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
+          <p class="text-xl text-gray-700 mb-8">
+            Sed placerat lectus quis feugiat blandit. Nunc mattis tortor sed pellentesque hendrerit. Quisque sed libero eu sem faucibus porttitor. Nullam blandit arcu urna, sed varius nisi feugiat eu.
+          </p>
+        </div>
+        
+        <div class="rounded-lg shadow-lg object-cover w-full h-full bg-gray-300">
+            <p class="text-gray-600 text-center p-4">
+              Photo d'illustration<br>
+              <span class="text-sm">Je le ferai plus tard</span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Core Values -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Lorem ipsum dolor sit amet</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Lorem Ipsum</h3>
+          <p class="text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-secondary-100 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Lorem Ipsum</h3>
+          <p class="text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-accent-100 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Lorem Ipsum</h3>
+          <p class="text-gray-700">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Lorem Ipsum</h3>
+          <p class="text-gray-700">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Lorem Ipsum</h3>
+          <p class="text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Lorem Ipsum</h3>
+          <p class="text-gray-700">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Church History -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Son histoire</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Les grandes étapes de l'histoire du dojo, depuis sa fondation jusqu'à aujourd'hui.
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="relative pl-8 sm:pl-16 py-6 group">
+          <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
+            <time class="sm:w-28 text-xs text-gray-500 uppercase">1946</time>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Fondation</h3>
+              <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis placerat sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
+            <time class="sm:w-28 text-xs text-gray-500 uppercase">2017</time>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Event 1</h3>
+              <p class="text-gray-700">
+                Aliquam vel cursus nisi, vestibulum dignissim tortor. Fusce blandit nec lorem at convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
+            <time class="sm:w-28 text-xs text-gray-500 uppercase">2026</time>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Event 2</h3>
+              <p class="text-gray-700">
+                Vestibulum ut tincidunt dui. Fusce laoreet faucibus arcu vel congue. Duis nisi nisl, viverra at odio in, elementum lacinia elit
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-7 before:h-full before:px-px before:bg-gray-300 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-7 after:w-4 after:h-4 after:bg-primary-600 after:border-4 after:border-white after:rounded-full after:-translate-x-1/2 after:translate-y-1.5">
+              <time class="sm:w-28 text-xs text-gray-500 uppercase">Present</time>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">Aujourd'hui</h3>
+                <p class="text-gray-700">
+                  Morbi est lacus, egestas id scelerisque in, pulvinar eu nisl. Vivamus imperdiet dolor in purus egestas, ac varius nulla consequat. 
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Staff List -->
+  <!-- <StaffList /> -->
+
+  <JoinUs />
+</BaseLayout>

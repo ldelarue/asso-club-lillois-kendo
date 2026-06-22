@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import siteData from "../../content/siteData";
 
 // Get the office hours from the siteInfo collection
 let officeHours;
@@ -13,33 +14,22 @@ try {
 
 // Footer navigation groups
 const footerNavs = [
-  // {
-  //   title: "About",
-  //   items: [
-  //     { text: "About Us", href: "/about-us" },
-  //     { text: "I'm New", href: "/im-new" },
-  //     { text: "Staff", href: "/staff" },
-  //     { text: "Contact", href: "/contact" },
-  //   ],
-  // },
-  // {
-  //   title: "Resources",
-  //   items: [
-  //     { text: "Sermons", href: "/sermons" },
-  //     { text: "Events", href: "/events" },
-  //     { text: "Blog", href: "/blog" },
-  //     { text: "Ministries", href: "/ministries" },
-  //   ],
-  // },
-  // {
-  //   title: "Connect",
-  //   items: [
-  //     { text: "Giving", href: "/giving" },
-  //     { text: "Prayer Request", href: "/contact#prayer" },
-  //     { text: "Newsletter", href: "/contact#newsletter" },
-  //     { text: "Volunteer", href: "/im-new#volunteer" },
-  //   ],
-  // },
+  {
+    title: "Sites web affiliés",
+    items: [
+      { text: "crkdr-hautsdefrance.com", href: "https://www.crkdr-hautsdefrance.com" },
+      { text: "ffjudo.com", href: "https://www.ffjudo.com/" },
+      { text: "butokukan.be", href: "https://www.butokukan.be/" }
+    ],
+  },
+  {
+    title: "Liens utiles",
+    items: [
+      { text: "Outil de rédaction d'articles", href: "/admin" },
+      { text: "Archives", href: "/archives/www.kendo-lille.com/index.html" },
+      { text: "Signaler un bug", href: "mailto:contact@kendo-lille.com" },
+    ],
+  },
 ];
 
 // Social media links
@@ -80,23 +70,15 @@ if (officeHours) {
 
 <footer class="bg-ink text-white pb-8">
   <div class="container">
-    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"> -->
-      <!-- Church Info -->
-      <!-- <div>
-        <address class="not-italic mb-4 text-gray-300">
-          <p>123 Main Street</p>
-          <p>Anytown, ST 12345</p>
-          <p class="mt-2">
-            <a href="tel:+15551234567" class="hover:text-primary-300">
-              (555) 123-4567
-            </a>
-          </p>
-          <p>
-            <a href="mailto:info@churchname.org" class="hover:text-primary-300">
-              info@churchname.org
-            </a>
-          </p>
-        </address> -->
+    <div class="grid gap-y-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-32 mb-12 pt-8">
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg font-bold mb-4 text-gray-300">Adresses</h4>
+        <address class="not-italic ml-2 text-gray-300">
+          <p>Siège Social : {siteData.contact.headquarters}</p>
+          <p>Dojo : {siteData.contact.address}</p>
+        </address>
+      </div>
         
         <!-- Office Hours -->
         <!-- <div class="mt-4 text-gray-300">
@@ -116,8 +98,35 @@ if (officeHours) {
           }
         </div> -->
         
-        <!-- Social Links -->
-        <div class="flex space-x-8 mt-6 mb-6 justify-center">
+        
+        <!-- Navigation Links -->
+      {
+        footerNavs.map((group) => (
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-gray-300">{group.title}</h4>
+            <ul class="space-y-1 ml-2">
+              {group.items.map((item) => (
+                <li>
+                  <a 
+                    href={item.href} 
+                    class="text-gray-300 hover:text-primary-300 transition-colors"
+                  >
+                    {item.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+      </div>
+
+    </div>
+    
+    <!-- Copyright -->
+    <div class="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+      <!-- Social Links -->
+        <div class="flex space-x-8 mb-6 justify-center">
           {
             socialLinks.map((link) => (
               <a
@@ -132,37 +141,11 @@ if (officeHours) {
             ))
           }
         </div>
-      </div>
-      
-      <!-- Navigation Links -->
-      <!-- {
-        footerNavs.map((group) => (
-          <div>
-            <h4 class="text-lg font-bold mb-4 text-white">{group.title}</h4>
-            <ul class="space-y-2">
-              {group.items.map((item) => (
-                <li>
-                  <a 
-                    href={item.href} 
-                    class="text-gray-300 hover:text-primary-300 transition-colors"
-                  >
-                    {item.text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      } -->
-    <!-- </div> -->
-    
-    <!-- Copyright -->
-    <div class="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
       <p>&copy; {currentYear} Club Lillois de Kendo. Tous droits réservés.</p>
-      <p class="mt-2">
-        <!-- <a href="/privacy-policy" class="hover:text-primary-300 mr-4">Privacy Policy</a>
-        <a href="/terms-of-service" class="hover:text-primary-300">Terms of Service</a> -->
-      </p>
+      <!-- <p class="mt-2">
+        <a href="/privacy-policy" class="hover:text-primary-300 mr-4">Privacy Policy</a>
+        <a href="/terms-of-service" class="hover:text-primary-300">Terms of Service</a>
+      </p> -->
     </div>
   </div>
 </footer>

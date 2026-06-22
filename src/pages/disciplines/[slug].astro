@@ -33,8 +33,7 @@ const { Content } = await entry.render();
 >
   <PageHeader 
     title={entry.data.name} 
-    subtitle={entry.data.summary}
-    backgroundImage="/uploads/ministries-header-bg.webp"
+    backgroundImage={entry.data.logo || "/uploads/ministries-header-bg.webp"}
   />
   
   <section class="py-16">
