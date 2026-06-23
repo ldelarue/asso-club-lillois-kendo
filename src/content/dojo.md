@@ -1,7 +1,7 @@
 ---
 name: Test
 body-1: Lorem
-body-2: >-
+body-2: >+
   ## Creating Your Prayer Space
 
 
@@ -14,22 +14,22 @@ body-2: >-
 
 
   1. **Choose a Consistent Time**
-     - Early morning before the day begins
-     - During lunch break
-     - Evening before bed
-
+    - Early morning before the day begins
+    - During lunch break
+    - Evening before bed
   2. **Start Small**
-     - Begin with 10-15 minutes
-     - Gradually increase as you become more comfortable
-     - Quality matters more than quantity
-
+    - Begin with 10-15 minutes
+    - Gradually increase as you become more comfortable
+    - Quality matters more than quantity
   3. **Structure Your Prayer Time**
-     - Begin with praise and thanksgiving
-     - Confess and seek forgiveness
-     - Present your requests
-     - Listen in silence
-body-3: >-
+    - Begin with praise and thanksgiving
+    - Confess and seek forgiveness
+    - Present your requests
+    - Listen in silence
+
+body-3: >+
   Keeping a prayer journal can help you:
+
 
   - Track God's faithfulness
 
@@ -47,3 +47,5 @@ body-3: >-
   > "Rejoice always, pray without ceasing, give thanks in all circumstances; for
   this is the will of God in Christ Jesus for you." - 1 Thessalonians 5:16-18
 ---
+# oui le body
+
