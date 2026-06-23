@@ -43,6 +43,27 @@ content:
       - { name: schedule, label: Horaires, type: string }
       - { name: body, label: Contenu, type: rich-text }
       - { name: draft, label: Brouillon, type: boolean }
+  - name: sign-up
+    label: Inscriptions
+    type: file
+    options:
+      path: downloads
+      extensions: [pdf]
+  
+  - name: events
+    label: Événements
+    type: collection
+    path: src/content/events
+    view:
+      fields: [ title, pubDatetime ]
+    fields:
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: pubDatetime, label: Date, type: date }
+      - { name: modDatetime, label: Date, type: date }
+      - { name: slug, label: Slug, type: string }
+      - { name: draft, label: Brouillon, type: boolean }
+      - { name: description, label: Description, type: string }
+      - { name: body, label: Contenu, type: rich-text }
   - name: articles
     label: Articles
     type: collection
@@ -57,20 +78,6 @@ content:
       - { name: slug, label: Slug, type: string }
       - { name: draft, label: Brouillon, type: boolean }
       - { name: tags, label: Étiquettes, type: string, list: true }
-      - { name: description, label: Description, type: string }
-      - { name: body, label: Contenu, type: rich-text }
-  - name: events
-    label: Événements
-    type: collection
-    path: src/content/events
-    view:
-      fields: [ title, pubDatetime ]
-    fields:
-      - { name: title, label: Titre, type: string, required: true }
-      - { name: pubDatetime, label: Date, type: date }
-      - { name: modDatetime, label: Date, type: date }
-      - { name: slug, label: Slug, type: string }
-      - { name: draft, label: Brouillon, type: boolean }
       - { name: description, label: Description, type: string }
       - { name: body, label: Contenu, type: rich-text }
   - name: about
