@@ -46,10 +46,12 @@ content:
   - name: sign-up
     label: Inscriptions
     type: file
-    options:
-      path: downloads
-      extensions: [pdf]
-  
+    path: src/_data/resources.json
+    fields:
+      - name: title
+        options:
+          path: downloads
+          extensions: [pdf]
   - name: events
     label: Événements
     type: collection
