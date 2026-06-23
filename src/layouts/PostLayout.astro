@@ -15,6 +15,7 @@ export interface Props {
   author?: string;
   tags?: string[];
   type?: "sermon" | "event" | "blog" | "ministry";
+  imageHeight?: "small" | "medium" | "large" | "full";
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   author,
   tags = [],
   type = "blog",
+  imageHeight = "medium",
 } = Astro.props;
 
 const seoType = "article";
@@ -47,15 +49,20 @@ const formattedDate = date ? formatDate(date) : null;
 
 <main class="container py-8">
   <div class="mx-auto max-w-3xl">
-
     {image && (
       <div class="mb-8 overflow-hidden rounded-lg">
         <img
           src={image.url}
           alt={image.alt}
-          class="object-cover w-full h-64 md:h-96"
-          widths={[320, 640, 1024]}
-          format="webp"
+          class:list={[
+            "w-full",
+            {
+              "h-48 md:h-64 object-cover": imageHeight === "small",
+              "h-64 md:h-96 object-cover": imageHeight === "medium",
+              "h-96 md:h-screen object-cover": imageHeight === "large",
+              "h-auto": imageHeight === "full",
+            },
+          ]}
           loading="lazy" />
       </div>
     )}

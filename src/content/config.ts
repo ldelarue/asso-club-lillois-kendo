@@ -18,7 +18,9 @@ const eventsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    date: z.date(), // Event start date
+    // Support both `startDate` (new) and `date` (legacy). Prefer `startDate`.
+    startDate: z.date(), // Event start date
+    date: z.date().optional(), // Legacy alias for startDate
     endDate: z.date().optional(), // Event end date
     time: z.string().optional(), // e.g., "09:00 AM - 11:00 AM"
     location: z.string(),
@@ -94,6 +96,26 @@ const blogCollection = defineCollection({
   }),
 });
 
+const articlesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    slug: z.string().optional(),
+    pubDate: z.date(),
+    description: z.string(), // Short description for previews
+    author: z.string().default("Church Staff"),
+    image: z.union([
+      z.string().startsWith('/uploads/'),
+      z.object({
+        url: z.string().startsWith('/uploads/'),
+        alt: z.string()
+      })
+    ]).optional(),
+    tags: z.array(z.string()).default(["general"]),
+    draft: z.boolean().default(false),
+  }),
+});
+
 const postCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -123,6 +145,7 @@ export const collections = {
   // ministries: ministriesCollection,
   disciplines: disciplinesCollection,
   blog: blogCollection,
+  articles: articlesCollection,
   post: postCollection,
   siteInfo: siteInfoCollection,
 };

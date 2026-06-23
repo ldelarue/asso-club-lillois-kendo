@@ -1,12 +1,12 @@
-import { format, parseISO } from "date-fns";
+import { format, parseISO, isAfter, isBefore, isSameDay } from "date-fns";
 
 /**
  * Format a date in a human-readable format
  * @param {Date|string} date The date to format
- * @param {string} formatStr The format string (default: 'MMMM d, yyyy')
+ * @param {string} formatStr The format string (default: 'dd/MM/yyyy')
  * @returns {string} The formatted date
  */
-export function formatDate(date, formatStr = "MMMM d, yyyy") {
+export function formatDate(date, formatStr = "dd/MM/yyyy") {
   if (!date) return "";
   
   // If date is a string, parse it
@@ -25,8 +25,10 @@ export function isFutureDate(date) {
   
   // If date is a string, parse it
   const dateObj = typeof date === "string" ? parseISO(date) : date;
-  
-  return dateObj > new Date();
+  const now = new Date();
+
+  // Treat events occurring today as upcoming
+  return isSameDay(dateObj, now) || isAfter(dateObj, now);
 }
 
 /**
@@ -39,6 +41,8 @@ export function isPastDate(date) {
   
   // If date is a string, parse it
   const dateObj = typeof date === "string" ? parseISO(date) : date;
-  
-  return dateObj < new Date();
+  const now = new Date();
+
+  // Exclude today's events from past
+  return isBefore(dateObj, now) && !isSameDay(dateObj, now);
 }

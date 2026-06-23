@@ -27,7 +27,7 @@ const footerNavs = [
     items: [
       { text: "Outil de rédaction d'articles", href: "/admin" },
       { text: "Archives", href: "/archives/www.kendo-lille.com/index.html" },
-      { text: "Signaler un bug", href: "mailto:contact@kendo-lille.com" },
+      { text: "Signaler un bug", href: "mailto:contact@kendo-lille.com?subject=Signaler%20un%20bug%20site%20web" },
     ],
   },
 ];
@@ -80,26 +80,7 @@ if (officeHours) {
         </address>
       </div>
         
-        <!-- Office Hours -->
-        <!-- <div class="mt-4 text-gray-300">
-          <h4 class="text-sm font-bold mb-2 text-white">Office Hours</h4>
-          {
-            OfficeHoursContent ? (
-              <div class="text-sm prose prose-sm prose-invert max-w-none [&_h3]:text-white [&_h3]:text-sm [&_h3]:font-bold [&_h3]:mb-2 [&_ul]:list-none [&_ul]:p-0 [&_li]:mb-1 [&_strong]:text-white">
-                <OfficeHoursContent />
-              </div>
-            ) : (
-              <div class="text-sm">
-                <p><strong class="text-white">Mon-Fri:</strong> 9:00 AM - 5:00 PM</p>
-                <p><strong class="text-white">Saturday:</strong> 9:00 AM - 1:00 PM</p>
-                <p><strong class="text-white">Sunday:</strong> Closed (except services)</p>
-              </div>
-            )
-          }
-        </div> -->
-        
-        
-        <!-- Navigation Links -->
+      <!-- Navigation Links -->
       {
         footerNavs.map((group) => (
           <div>
@@ -120,7 +101,6 @@ if (officeHours) {
         ))
       }
       </div>
-
     </div>
     
     <!-- Copyright -->
@@ -142,10 +122,6 @@ if (officeHours) {
           }
         </div>
       <p>&copy; {currentYear} Club Lillois de Kendo. Tous droits réservés.</p>
-      <!-- <p class="mt-2">
-        <a href="/privacy-policy" class="hover:text-primary-300 mr-4">Privacy Policy</a>
-        <a href="/terms-of-service" class="hover:text-primary-300">Terms of Service</a>
-      </p> -->
     </div>
   </div>
 </footer>

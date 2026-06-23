@@ -9,10 +9,10 @@ export interface Props {
   showViewAll?: boolean;
 }
 
-const { count = 3, showViewAll = true } = Astro.props;
+const { count, showViewAll = true } = Astro.props;
 
-// Get posts from the `post` collection sorted by pubDate (newest first)
-const allPosts = await getCollection("post", ({ data }) => {
+// Get articles from the `articles` collection sorted by pubDate (newest first)
+const allPosts = await getCollection("articles", ({ data }) => {
   return import.meta.env.PROD ? !data.draft : true;
 });
 
@@ -22,25 +22,31 @@ const posts = allPosts
   .slice(0, count);
 ---
 
-<section class="py-16 bg-white">
+<section class="py-16 bg-gray-50">
   <div class="container">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Derniers articles</h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Restez informé des nouveautés et conseils partagés sur notre blog. Retrouvez des articles, annonces et ressources utiles pour la communauté.
+        Restez informé des nouveautés et conseils partagés sur notre site web
       </p>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {posts.map((post) => (
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+      {posts.map((post, index) => (
         <Card
-          className="shadow-none"
+          className={
+            (posts.length === 1 ? "lg:col-span-4 lg:col-start-5" : 
+            (posts.length === 2 ? (index === 0 ? "lg:col-span-4 lg:col-start-3" : "lg:col-span-4 lg:col-start-7") : "lg:col-span-4")) + " shadow-md hover:shadow-lg transition-shadow"
+          }
           title={post.data.title}
           image={{
-            src: post.data.image || "/images/blog-placeholder.webp",
-            alt: post.data.title
+            src: typeof post.data.image === 'string' ? post.data.image : post.data.image?.url || "/images/blog-placeholder.webp",
+            alt: typeof post.data.image === 'string' ? post.data.title : post.data.image?.alt || post.data.title
           }}
-          href={`/posts/${post.slug}`}
+          href={`/articles/${post.slug}`}
+          data-tags={post.data.tags ? post.data.tags.join(',') : ''}
+          data-author={post.data.author}
+          data-date={new Date(post.data.pubDate).toISOString().slice(0,10)}
         >
           <div class="mb-3 flex items-center text-gray-600">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,6 +65,16 @@ const posts = allPosts
           )}
           
           <p class="text-gray-700 mb-4">{post.data.description}</p>
+
+          {
+            post.data.tags && post.data.tags.length > 0 && (
+              <div class="flex flex-wrap gap-2 mb-4">
+                {post.data.tags.map((tag) => (
+                  <span class="px-2 py-1 text-xs font-medium text-primary-700 bg-primary-100 rounded-full">{tag}</span>
+                ))}
+              </div>
+            )
+          }
 
           <p class="text-primary-600 font-medium group-hover:underline group-hover:text-primary-700">
             Lire l'article →
