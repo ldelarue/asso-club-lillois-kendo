@@ -28,7 +28,7 @@ content:
       - { name: description, label: Description, type: string }
       - { name: body, label: Contenu, type: rich-text }
   - name: disciplines
-    label: Disciplines
+    label: Sections
     type: collection
     path: src/content/disciplines
     view:
@@ -36,9 +36,12 @@ content:
     fields:
       - { name: name, label: Nom, type: string, required: true }
       - { name: slug, label: Slug, type: string }
-      - { name: draft, label: Brouillon, type: boolean }
-      - { name: description, label: Description, type: string }
+      - { name: logo, label: Logo, type: image }
+      - { name: summary, label: Description, type: string }
+      - { name: contact, label: Contact, type: string }
+      - { name: schedule, label: Horaires, type: string }
       - { name: body, label: Contenu, type: rich-text }
+      - { name: draft, label: Brouillon, type: boolean }
   - name: events
     label: Événements
     type: collection
