@@ -6,24 +6,6 @@ media:
     - src/assets
   output: /
 content:
-  - name: posts
-    label: Articles (blog)
-    type: collection
-    path: src/content/blog
-    view:
-      fields: [ title, draft, date ]
-    fields:
-      - { name: author, label: Auteur, type: string }
-      - { name: pubDatetime, label: Date, type: date }
-      - { name: modDatetime, label: Date, type: date }
-      - { name: title, label: Titre, type: string, required: true }
-      - { name: ogImage, label: Image OG, type: string }
-      - { name: slug, label: Slug, type: string }
-      - { name: featured, label: En vedette, type: boolean }
-      - { name: draft, label: Brouillon, type: boolean }
-      - { name: tags, label: Étiquettes, type: string, list: true }
-      - { name: description, label: Description, type: string }
-      - { name: body, label: Contenu, type: rich-text }
   - name: articles
     label: Articles
     type: collection
