@@ -7,12 +7,9 @@ settings:
       delete: "content(delete): {path}"
       rename: "content(rename): {oldPath} -> {newPath}"
 media:
-  input:
-    - public
-    - public/uploads
-    - public/archives
-    - src/assets
-  output: /
+  label: media
+  input: public/uploads
+  output: /uploads
 content:
   - name: articles
     label: Articles
