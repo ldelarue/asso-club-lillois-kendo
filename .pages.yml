@@ -48,7 +48,10 @@ content:
     type: file
     path: src/_data/resources.json
     fields:
-      - name: title
+      - name: pdf
+        label: >
+          Sélectionner le PDF d'inscription
+        type: file
         options:
           path: downloads
           extensions: [pdf]
