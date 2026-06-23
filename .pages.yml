@@ -27,6 +27,7 @@ content:
       - { name: side-image, label: Illustration, type: image, required: false }
       - { name: body-2, label: section-2, type: rich-text, required: false }
       - { name: body-3, label: section-3, type: rich-text, required: false }
+      - { name: body, label: bodyi, type: rich-text, required: false }
   - name: disciplines
     label: Sections
     type: collection
