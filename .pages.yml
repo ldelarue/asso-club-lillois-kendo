@@ -55,17 +55,6 @@ content:
         options:
           path: downloads
           extensions: [pdf]
-  - name: brochure
-    label: Brochure
-    type: file
-    path: src/_data/brochure.json
-    fields:
-      - name: pdf
-        label: Select PDF
-        type: file
-        options:
-          extensions: [pdf]
-          path: documents
   - name: events
     label: Événements
     type: collection
