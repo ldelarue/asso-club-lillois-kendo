@@ -1,0 +1,121 @@
+media:
+  input:
+    - public
+    - public/uploads
+    - public/archives
+    - src/assets
+  output: /
+content:
+  - name: posts
+    label: Articles (blog)
+    type: collection
+    path: src/content/blog
+    view:
+      fields: [ title, draft, date ]
+    fields:
+      - { name: author, label: Auteur, type: string }
+      - { name: pubDatetime, label: Date, type: date }
+      - { name: modDatetime, label: Date, type: date }
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: ogImage, label: Image OG, type: string }
+      - { name: slug, label: Slug, type: string }
+      - { name: featured, label: En vedette, type: boolean }
+      - { name: draft, label: Brouillon, type: boolean }
+      - { name: tags, label: Étiquettes, type: string, list: true }
+      - { name: description, label: Description, type: string }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: articles
+    label: Articles
+    type: collection
+    path: src/content/articles
+    view:
+      fields: [ title, draft, pubDatetime ]
+    fields:
+      - { name: author, label: Auteur, type: string }
+      - { name: pubDatetime, label: Date, type: date }
+      - { name: modDatetime, label: Date, type: date }
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: slug, label: Slug, type: string }
+      - { name: draft, label: Brouillon, type: boolean }
+      - { name: tags, label: Étiquettes, type: string, list: true }
+      - { name: description, label: Description, type: string }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: disciplines
+    label: Disciplines
+    type: collection
+    path: src/content/disciplines
+    view:
+      fields: [ title, draft ]
+    fields:
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: slug, label: Slug, type: string }
+      - { name: draft, label: Brouillon, type: boolean }
+      - { name: description, label: Description, type: string }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: events
+    label: Événements
+    type: collection
+    path: src/content/events
+    view:
+      fields: [ title, pubDatetime ]
+    fields:
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: pubDatetime, label: Date, type: date }
+      - { name: modDatetime, label: Date, type: date }
+      - { name: slug, label: Slug, type: string }
+      - { name: draft, label: Brouillon, type: boolean }
+      - { name: description, label: Description, type: string }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: ministries
+    label: Ministères
+    type: collection
+    path: src/content/ministries
+    view:
+      fields: [ title ]
+    fields:
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: slug, label: Slug, type: string }
+      - { name: description, label: Description, type: string }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: post
+    label: Articles (post)
+    type: collection
+    path: src/content/post
+    view:
+      fields: [ title, pubDatetime ]
+    fields:
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: pubDatetime, label: Date, type: date }
+      - { name: modDatetime, label: Date, type: date }
+      - { name: slug, label: Slug, type: string }
+      - { name: draft, label: Brouillon, type: boolean }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: staff
+    label: Équipe
+    type: collection
+    path: src/content/staff
+    view:
+      fields: [ title ]
+    fields:
+      - { name: name, label: Nom, type: string, required: true }
+      - { name: role, label: Rôle, type: string }
+      - { name: slug, label: Slug, type: string }
+      - { name: photo, label: Photo, type: string }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: tmp
+    label: Temporaire
+    type: collection
+    path: src/content/tmp
+    view:
+      fields: [ title ]
+    fields:
+      - { name: title, label: Titre, type: string }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: about
+    label: À propos
+    type: file
+    path: src/pages/about.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
+      - { name: title, label: Titre, type: string }
+      - { name: body, label: Contenu, type: rich-text, options: { input: public/assets, output: /assets } }
