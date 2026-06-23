@@ -66,17 +66,6 @@ content:
       - { name: draft, label: Brouillon, type: boolean }
       - { name: description, label: Description, type: string }
       - { name: body, label: Contenu, type: rich-text }
-  - name: ministries
-    label: Ministères
-    type: collection
-    path: src/content/ministries
-    view:
-      fields: [ title ]
-    fields:
-      - { name: title, label: Titre, type: string, required: true }
-      - { name: slug, label: Slug, type: string }
-      - { name: description, label: Description, type: string }
-      - { name: body, label: Contenu, type: rich-text }
   - name: post
     label: Articles (post)
     type: collection
@@ -89,27 +78,6 @@ content:
       - { name: modDatetime, label: Date, type: date }
       - { name: slug, label: Slug, type: string }
       - { name: draft, label: Brouillon, type: boolean }
-      - { name: body, label: Contenu, type: rich-text }
-  - name: staff
-    label: Équipe
-    type: collection
-    path: src/content/staff
-    view:
-      fields: [ title ]
-    fields:
-      - { name: name, label: Nom, type: string, required: true }
-      - { name: role, label: Rôle, type: string }
-      - { name: slug, label: Slug, type: string }
-      - { name: photo, label: Photo, type: string }
-      - { name: body, label: Contenu, type: rich-text }
-  - name: tmp
-    label: Temporaire
-    type: collection
-    path: src/content/tmp
-    view:
-      fields: [ title ]
-    fields:
-      - { name: title, label: Titre, type: string }
       - { name: body, label: Contenu, type: rich-text }
   - name: about
     label: À propos
