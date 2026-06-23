@@ -23,8 +23,10 @@ content:
       fields: [ name ]
     fields:
       - { name: name, label: Nom, type: string, required: true }
-      - { name: body-1, label: section-1, type: rich-text, required: true }
-      - { name: side-image, label: Illustration, type: image, required: true }
+      - { name: body-1, label: section-1, type: rich-text, required: false }
+      - { name: side-image, label: Illustration, type: image, required: false }
+      - { name: body-2, label: section-2, type: rich-text, required: false }
+      - { name: body-3, label: section-3, type: rich-text, required: false }
   - name: disciplines
     label: Sections
     type: collection
