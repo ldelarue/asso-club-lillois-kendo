@@ -53,7 +53,7 @@ content:
           Sélectionner le PDF d'inscription
         type: file
         options:
-          path: downloads
+          path: public/uploads/inscriptions
           extensions: [pdf]
   - name: events
     label: Événements
