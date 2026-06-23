@@ -22,7 +22,7 @@ content:
     view:
       fields: [ name ]
     fields:
-      - { name: name, label: Nom, type: string, required: true }
+      - { name: name, label: Nom, type: string, required: false }
       - { name: body-1, label: section-1, type: rich-text, required: false }
       - { name: side-image, label: Illustration, type: image, required: false }
       - { name: body-2, label: section-2, type: rich-text, required: false }
