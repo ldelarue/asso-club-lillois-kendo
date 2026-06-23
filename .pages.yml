@@ -15,6 +15,33 @@ media:
     input: public/resources
     output: /web-resources
 content:
+  - name: dojo
+    label: Le Dojo
+    type: file
+    path: src/content/dojo.md
+    view:
+      fields: [ name ]
+    fields:
+      - { name: name, label: Nom, type: string, required: true }
+      - { name: body-1, label: section-1, type: rich-text, required: true }
+      - { name: side-image, label: Illustration, type: image, required: true }
+      - { name: body-2, label: section-2, type: rich-text, required: true }
+      - { name: body-3, label: section-3, type: rich-text, required: true }
+  - name: disciplines
+    label: Sections
+    type: collection
+    path: src/content/disciplines
+    view:
+      fields: [ name, draft ]
+    fields:
+      - { name: name, label: Nom, type: string, required: true }
+      - { name: slug, label: Slug, type: string }
+      - { name: logo, label: Logo, type: image }
+      - { name: summary, label: Description, type: string }
+      - { name: contact, label: Contact, type: string }
+      - { name: schedule, label: Horaires, type: string }
+      - { name: body, label: Contenu, type: rich-text }
+      - { name: draft, label: Brouillon, type: boolean }
   - name: articles
     label: Articles
     type: collection
@@ -31,21 +58,6 @@ content:
       - { name: tags, label: Étiquettes, type: string, list: true }
       - { name: description, label: Description, type: string }
       - { name: body, label: Contenu, type: rich-text }
-  - name: disciplines
-    label: Sections
-    type: collection
-    path: src/content/disciplines
-    view:
-      fields: [ name, draft ]
-    fields:
-      - { name: name, label: Nom, type: string, required: true }
-      - { name: slug, label: Slug, type: string }
-      - { name: logo, label: Logo, type: image }
-      - { name: summary, label: Description, type: string }
-      - { name: contact, label: Contact, type: string }
-      - { name: schedule, label: Horaires, type: string }
-      - { name: body, label: Contenu, type: rich-text }
-      - { name: draft, label: Brouillon, type: boolean }
   - name: events
     label: Événements
     type: collection
