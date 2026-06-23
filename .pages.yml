@@ -1,6 +1,6 @@
 settings:
   commit:
-    identity: app
+    identity: user
     templates:
       create: "content(create): {path}"
       update: "content(update): {path}"
