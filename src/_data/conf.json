@@ -9,8 +9,11 @@
       },
       {
         "section": "Iaïdo",
-        "monday": "12h30-13h30"
-      }
+        "monday": "12h30-13h30",
+        "wednesday": "18h00-19h00",
+        "saturday": "12h30-13h30"
+      },
+      {}
     ]
   },
   "footer": {
