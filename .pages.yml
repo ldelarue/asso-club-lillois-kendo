@@ -16,8 +16,8 @@ media:
 content:
   - name: schedules
     label: Horaires
-    type: file
-    path: src/_data/schedules.json
+    type: collection
+    path: src/_data/schedules
     fields:
       - name: section
         type: reference
