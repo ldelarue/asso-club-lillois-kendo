@@ -83,7 +83,7 @@ content:
               - name: url
                 type: string
                 required: true
-  - name: Staff
+  - name: staff
     label: Staff
     type: collection
     path: src/content/staff
@@ -123,7 +123,6 @@ content:
       - name: contact
         label: Contact
         type: reference
-        required: true
         options:
           collection: staff
       - { name: draft, label: Brouillon, type: boolean }
