@@ -34,7 +34,7 @@ content:
                 collection: disciplines
                 value: "{fields.name}"
                 label: "{fields.name}"
-            - { name: content, label: Contenu, type: string}
+            - { name: content, label: Contenu, type: rich-text}
             - { name: comment, label: Commentaire, type: string}
     - name: footer
       label: Bas-de-page
