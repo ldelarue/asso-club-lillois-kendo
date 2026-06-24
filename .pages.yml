@@ -152,21 +152,23 @@ content:
     type: collection
     path: src/content/events
     view:
-      fields: [ title, pubDatetime ]
+      fields: [ title, startDate , endDate, draft]
     fields:
       - { name: title, label: Titre, type: string, required: true }
-      - { name: pubDate, label: Date, type: date }
-      - { name: modDate, label: Date, type: date }
-      - { name: slug, label: Slug, type: string }
       - { name: draft, label: Brouillon, type: boolean }
+      - { name: startDate, label: Date de Début, type: date, required: true}
+      - { name: endDate, label: Date, type: date }
+      - { name: location, label: Lieu, type: string }
+      - { name: slug, label: Slug, type: string }
       - { name: description, label: Description, type: string }
+      - { name: image, label: Illustration, type: image, required: true}
       - { name: body, label: Contenu, type: rich-text }
   - name: articles
     label: Articles
     type: collection
     path: src/content/articles
     view:
-      fields: [ title, draft, pubDatetime ]
+      fields: [ title, draft, pubDate ]
     fields:
       - { name: author, label: Auteur, type: string, required: true }
       - name: pubDate
