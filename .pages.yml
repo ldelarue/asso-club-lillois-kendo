@@ -7,13 +7,13 @@ settings:
       rename: "content(rename): {oldPath} -> {newPath}"
 media:
   - name: images
-    label: media
+    label: Images
     input: public/uploads
     output: /uploads
     categories: [image]
     rename: safe
   - name: documents
-    label: media
+    label: Documents
     input: public/uploads
     output: /uploads
     categories: [documents]
