@@ -23,6 +23,15 @@
         "section": "Judo",
         "wednesday": "16h00-17h30",
         "saturday": "14h00-15h30"
+      },
+      {
+        "section": "Kendo",
+        "tuesday": "18h00-20h00",
+        "wednesday": "19h00-20h00",
+        "thursday": "12h00-13h30 | 18h00-20h00",
+        "friday": "12h00-13h30 ",
+        "saturday": "17h30-19h00",
+        "sunday": "11h00-12h30"
       }
     ]
   },
