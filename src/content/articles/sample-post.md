@@ -1,7 +1,7 @@
 ---
 author: Louis
 pubDate: 24/06/2026
-title: Bienvenue au Club Lillois de Kendo
+title: Hello ! Je travail sur ce site !
 draft: false
 tags:
   - web
