@@ -16,7 +16,7 @@ media:
     label: Documents
     input: public/uploads
     output: /uploads
-    categories: [documents]
+    categories: [document]
     rename: safe
 content:
   - name: config
