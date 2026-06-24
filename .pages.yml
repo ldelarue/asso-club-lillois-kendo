@@ -176,7 +176,7 @@ content:
       - { name: image, label: Illustration, type: image, required: true}
       - name: registrationLink
         label: > 
-          Lien d'un formulaire
+          Lien d'un formulaire (⚠️ doit être une URL valide si spécifiée)
       - { name: body, label: Contenu, type: rich-text }
   - name: articles
     label: Articles
