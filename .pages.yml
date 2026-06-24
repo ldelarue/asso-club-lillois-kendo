@@ -10,9 +10,6 @@ media:
     label: media
     input: public/uploads
     output: /uploads
-  - name: website
-    input: public/resources
-    output: /web-resources
 content:
   - name: config
     label: Configuration du site web
