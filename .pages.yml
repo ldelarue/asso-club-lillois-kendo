@@ -81,6 +81,7 @@ content:
         label: Date de publication
         type: date
         default: ""
+        required: true
       - { name: title, label: Titre, type: string, required: true }
       - { name: draft, label: Brouillon, type: boolean }
       - { name: tags, label: Étiquettes, type: string, list: true }
