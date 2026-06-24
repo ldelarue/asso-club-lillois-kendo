@@ -23,7 +23,9 @@ content:
           label: Horaires
           type: object
           list:
-            collapsible: true
+            collapsible:
+              collapsed: true
+              summary: "{section}"
           fields:
             - name: section
               type: reference
