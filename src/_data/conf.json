@@ -3,6 +3,34 @@
     "addresses": {
       "dojo": "Salle de sport, Gare Saint Sauveur, Lille",
       "headquarters": "81, rue Pasteur 59155 Faches-Thumesnil"
-    }
+    },
+    "other-websites": [
+      {
+        "label": "crkdr-hautsdefrance.com",
+        "url": "https://www.crkdr-hautsdefrance.com/"
+      },
+      {
+        "label": "ffjudo.com",
+        "url": "https://www.ffjudo.com/"
+      },
+      {
+        "label": "butokukan.be",
+        "url": "https://butokukan.be/fr/"
+      }
+    ],
+    "links": [
+      {
+        "label": "Outil de rédaction d'articles ",
+        "url": "https://app.pagescms.org/ldelarue/asso-club-lillois-kendo"
+      },
+      {
+        "label": "Archives",
+        "url": "https://clk.louis.delarue.dev/archives/www.kendo-lille.com/index.html"
+      },
+      {
+        "label": "Signaler un bug",
+        "url": "mailto:contact@kendo-lille.com?subject=Signaler%20un%20bug%20site%20web"
+      }
+    ]
   }
 }
