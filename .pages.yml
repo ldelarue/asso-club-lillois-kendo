@@ -14,10 +14,10 @@ media:
     input: public/resources
     output: /web-resources
 content:
-  - name: schedules
-    label: Horaires
+  - name: config
+    label: Configuration du site web
     type: file
-    path: src/_data/schedules.json
+    path: src/_data/conf.json
     fields:
       - name: schedules
         label: Horaires
