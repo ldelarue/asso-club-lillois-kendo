@@ -42,7 +42,7 @@ content:
                 collection: disciplines
                 value: "{fields.name}"
                 label: "{fields.name}"
-            - { name: content, label: Contenu, type: rich-text}
+            - { name: content, label: Contenu, type: text}
             - { name: comment, label: Commentaire, type: string}
     - name: footer
       label: Bas-de-page
