@@ -94,7 +94,7 @@ content:
     type: collection
     path: src/content/staff
     view:
-      fields: [ name ]
+      fields: [ name, photo ]
     fields:
       - { name: name, label: Nom, type: string, required: true }
       - { name: jobTitle, label: Fonction, type: string, required: true }
@@ -106,8 +106,6 @@ content:
     label: Le Dojo
     type: file
     path: src/content/dojo.md
-    view:
-      fields: [ name ]
     fields:
       - { name: body-1, label: section-1, type: rich-text, required: false }
       - { name: side-image, label: Illustration, type: image, required: false }
@@ -119,9 +117,10 @@ content:
     type: collection
     path: src/content/disciplines
     view:
-      fields: [ name, logo, coordinator, contact, draft ]
+      fields: [ name, logo, coordinator, draft ]
     fields:
       - { name: name, label: Nom, type: string, required: true }
+      - { name: draft, label: Brouillon, type: boolean, default: true }
       - { name: slug, label: Slug, type: string }
       - { name: logo, label: Logo, type: image }
       - { name: summary, label: Description, type: string, required: true }
@@ -133,7 +132,6 @@ content:
           required: true
           value: "{fields.name}"
           label: "{fields.name}"
-      - { name: draft, label: Brouillon, type: boolean }
       - { name: body, label: Contenu, type: rich-text }
   - name: sign-up
     label: Inscriptions
@@ -152,23 +150,25 @@ content:
     type: collection
     path: src/content/events
     view:
-      fields: [ title, startDate , endDate, draft]
+      fields: [ title, image, startDate , endDate, location, draft]
     fields:
       - { name: title, label: Titre, type: string, required: true }
-      - { name: draft, label: Brouillon, type: boolean }
+      - { name: draft, label: Brouillon, type: boolean, default: true }
       - { name: startDate, label: Date de Début, type: date, required: true}
       - { name: endDate, label: Date, type: date }
       - { name: location, label: Lieu, type: string }
-      - { name: slug, label: Slug, type: string }
       - { name: description, label: Description, type: string }
       - { name: image, label: Illustration, type: image, required: true}
+      - name: registrationLink
+        label: > 
+          Lien d'un formulaire
       - { name: body, label: Contenu, type: rich-text }
   - name: articles
     label: Articles
     type: collection
     path: src/content/articles
     view:
-      fields: [ title, draft, pubDate ]
+      fields: [ title, image, pubDate, draft]
     fields:
       - { name: author, label: Auteur, type: string, required: true }
       - name: pubDate
@@ -177,7 +177,7 @@ content:
         default: ""
         required: true
       - { name: title, label: Titre, type: string, required: true }
-      - { name: draft, label: Mode brouillon, type: boolean }
+      - { name: draft, label: Mode brouillon, type: boolean, default: true }
       - { name: tags, label: Étiquettes, type: string, list: true }
       - { name: description, label: Description, type: string}
       - { name: image, label: Illustration, type: image, required: true}
