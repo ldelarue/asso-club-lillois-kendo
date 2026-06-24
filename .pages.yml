@@ -6,10 +6,12 @@ settings:
       delete: "content(delete): {path}"
       rename: "content(rename): {oldPath} -> {newPath}"
 media:
-  - name: media
+  - name: images
     label: media
     input: public/uploads
     output: /uploads
+    categories: [image]
+    rename: safe
 content:
   - name: config
     label: Configuration du site web
