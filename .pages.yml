@@ -33,13 +33,13 @@ content:
                 collection: disciplines
                 value: "{fields.name}"
                 label: "{fields.name}"
-            - { name: monday, label: lundi, type: string}
-            - { name: tuesday, label: mardi, type: string}
-            - { name: wednesday, label: mercredi, type: string}
-            - { name: thursday, label: jeudi, type: string}
-            - { name: friday, label: vendredi, type: string}
-            - { name: saturday, label: samedi, type: string}
-            - { name: sunday, label: dimanche, type: string}
+            - { name: monday, label: Lundi, type: string}
+            - { name: tuesday, label: Mardi, type: string}
+            - { name: wednesday, label: Mercredi, type: string}
+            - { name: thursday, label: Jeudi, type: string}
+            - { name: friday, label: Vendredi, type: string}
+            - { name: saturday, label: Samedi, type: string}
+            - { name: sunday, label: Dimanche, type: string}
             - { name: comment, label: Commentaire, type: string}
     - name: footer
       label: Bas-de-page
