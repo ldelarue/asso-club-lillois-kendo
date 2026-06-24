@@ -12,6 +12,12 @@ media:
     output: /uploads
     categories: [image]
     rename: safe
+  - name: documents
+    label: media
+    input: public/uploads
+    output: /uploads
+    categories: [documents]
+    rename: safe
 content:
   - name: config
     label: Configuration du site web
