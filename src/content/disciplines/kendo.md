@@ -1,15 +1,14 @@
 ---
-name: "Kendo"
-slug: "kendo"
-logo: "/uploads/disciplines/kendo.jpg"
-summary: "Le Kendo (剣道, « voie du sabre ») est l’escrime japonaise où les combattants sont revêtus d’une armure de protection et armés d’un shinaï. En parallèle, des exercices au boken et au iaïto sont étudiés sous le nom de Koryu."
-coordinator: "Jean-Paul Carpentier"
-contact: "contact@kendo-lille.com"
-schedule: "Du mardi au samedi"
-order: 4
+name: Kendo
+slug: kendo
+logo: /uploads/disciplines/kendo.jpg
+summary: Le Kendo (剣道, « voie du sabre ») est l’escrime japonaise où les
+  combattants sont revêtus d’une armure de protection et armés d’un shinaï. En
+  parallèle, des exercices au boken et au iaïto sont étudiés sous le nom de
+  Koryu.
+contact: Jean-Paul Carpentier
 draft: false
 ---
-
 # En quelques mots
 
 Le Kendo est l’escrime japonaise (pratiquée anciennement par les Samouraï) où les combattants sont revêtus d’une armure de protection et armés d’un shinaï (sabre en bambou). En parallèle, des exercices au boken (sabre en bois) et au iaïto (réplique en métal du sabre réel) sont étudiés sous le nom de Koryu (pratiques anciennes).
@@ -17,13 +16,20 @@ Le Kendo est l’escrime japonaise (pratiquée anciennement par les Samouraï) o
 L’équipement protecteur est prêté dans les premiers temps, dès que le pratiquant
 est apte à les revêtir. Il ne faut savoir que le kendo se veut avant tout d’élever l’individu en reflétant la vraie nature du bushido et toute pratique doit s’efforcer de polir les vertus traditionnelles.
 
-Chugi – Fidélité – Loyauté <br>
-Gi – Honneur – Rectitude – Décision Juste<br>
-Jin – Bienveillance – Générosité <br>
-Makoto – Honnêteté<br>
-Meiyo – Honneur <br>
-Rei – Respect – Courtoisie – Étiquette <br>
-Yu – Courage <br>
+Chugi – Fidélité – Loyauté   
+
+Gi – Honneur – Rectitude – Décision Juste  
+
+Jin – Bienveillance – Générosité   
+
+Makoto – Honnêteté  
+
+Meiyo – Honneur   
+
+Rei – Respect – Courtoisie – Étiquette   
+
+Yu – Courage   
+
 
 Les frappes sont établies par l’intermédiaire des shinaïs, qui, s’ils sont bien entretenus, représentent un danger maîtrisé. Afin de limiter les risques d’accidents, nous tenons à rappeler la nécessité d’avoir 2 shinaïs en bon état à disposition et d’assurer l’entretien constant de ces derniers. En effet, une simple écharde peut représenter un désagrément certain pour les pratiquants qui se blessent avec. Il s’agit donc d’entretenir son shinaï avec un couteau spécialisé à cet effet ou du papier de verre afin de supprimer les ébarbures ou autres aspérités. Mais une brisure ou une fissure peut représenter un véritable danger pour celui qui porte l’utchi comme pour celui qui le reçoit. Il est donc impératif de
 changer de shinaï si l’une d’entre elles apparaît (et parfois elles sont bien cachées) pendant un entraînement.Des ateliers de réparation de shinaï sont proposés une à deux fois par an sur le dojo.
@@ -33,7 +39,7 @@ consiste en l’apprentissage de scénarii visant à améliorer sa pratique et a
 
 [Nihon Kendo Kata par Jean-Pierre Raick – Pdf](/uploads/disciplines/Nihon-Kendo-Kata-Jean-Pierre-Raick.pdf)
 
-# Pour débuter 
+# Pour débuter
 
 La loi française interdisant de se déplacer avec ces armes (shinaï, boken et kodachi) à vue et en accès rapide, il sera également nécessaire d’acquérir une housse de transport.
 
