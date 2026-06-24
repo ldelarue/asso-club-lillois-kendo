@@ -153,6 +153,7 @@ content:
           media: documents
           path: public/uploads/inscriptions
           extensions: [pdf]
+          required: true
   - name: events
     label: Évènements
     type: collection
