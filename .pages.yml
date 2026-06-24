@@ -44,6 +44,9 @@ content:
                 label: "{fields.name}"
             - { name: content, label: Contenu, type: text}
             - { name: comment, label: Commentaire, type: string}
+        - name: maps-url
+          label: Lien maps de la salle
+          type: string
     - name: footer
       label: Bas-de-page
       type: object
