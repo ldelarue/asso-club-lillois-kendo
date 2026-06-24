@@ -61,7 +61,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{label} {url} ({index})"
+                summary: "{label} / {url}"
             fields:
               - name: label
                 type: string
@@ -75,7 +75,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{label} {url} ({index})"
+                summary: "{label} / {url}"
             fields:
               - name: label
                 type: string
@@ -83,6 +83,15 @@ content:
               - name: url
                 type: string
                 required: true
+          - name: facebook-link
+            label: Lien Facebook
+            type: string
+          - name: instagram-link
+            label: Lien Instagram
+            type: string
+          - name: youtube-link
+            label: Lien Youtube
+            type: string
   - name: staff
     label: Staff
     type: collection
