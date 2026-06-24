@@ -126,9 +126,6 @@ content:
         required: true
         options:
           collection: staff
-          value: "{fields.name}"
-          label: "{fields.name}"
-      - { name: schedule, label: Horaires, type: string }
       - { name: draft, label: Brouillon, type: boolean }
       - { name: body, label: Contenu, type: rich-text }
   - name: sign-up
