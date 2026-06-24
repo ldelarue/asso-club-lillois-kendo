@@ -1,5 +1,6 @@
 ---
 author: Louis
+pubDate: 24/06/2026
 title: Bienvenue au Club Lillois de Kendo
 draft: false
 tags:
