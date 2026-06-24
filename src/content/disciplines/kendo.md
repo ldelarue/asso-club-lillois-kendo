@@ -6,7 +6,7 @@ summary: Le Kendo (剣道, « voie du sabre ») est l’escrime japonaise où le
   combattants sont revêtus d’une armure de protection et armés d’un shinaï. En
   parallèle, des exercices au boken et au iaïto sont étudiés sous le nom de
   Koryu.
-contact: Jean-Paul Carpentier
+coordinator: Jean-Paul Carpentier
 draft: false
 ---
 # En quelques mots
