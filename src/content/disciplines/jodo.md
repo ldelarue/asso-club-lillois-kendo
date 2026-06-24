@@ -5,7 +5,7 @@ logo: /uploads/disciplines/jodo.jpg
 summary: Le jodo (杖道, « voie du baton ») est un art martial traditionnel
   japonais inventé au XVIIe siècle. Il enseigne le maniement du bâton (jo) pour
   se défendre face à un sabre (bokken).
-contact: Olivier Bayart
+coordinator: Olivier Bayart
 draft: false
 ---
 ## En quelques mots
