@@ -163,7 +163,9 @@ content:
     path: src/content/events
     view:
       fields: [startDate , endDate, title, image, location, draft]
-      sort: [startDate, title]
+      default:
+        sort: startDate
+        order: desc
     fields:
       - { name: title, label: Titre, type: string, required: true }
       - { name: draft, label: Brouillon, type: boolean, default: true }
@@ -182,7 +184,9 @@ content:
     path: src/content/articles
     view:
       fields: [ pubDate, title, image, draft]
-      sort: [pubDate, title]
+      default:
+        sort: pubDate
+        order: desc
     fields:
       - { name: author, label: Auteur, type: string, required: true }
       - name: pubDate
