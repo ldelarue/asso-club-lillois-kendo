@@ -5,7 +5,7 @@ title: Hello ! Je travaille sur ce site !
 draft: false
 tags:
   - web
-image: /uploads/thank-you-bg.webp
+image: /uploads/generic/community-outreach.webp
 ---
 Bonjour !  
 Ceci est un article juste pour vous dire que travaille encore sur site web ! Je vais tenter de le finir au plus vite !  

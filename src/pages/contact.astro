@@ -1,18 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageHeader from "../components/Sections/PageHeader.astro";
 import StaffList from "../components/Sections/StaffList.astro";
 import { getCollection } from 'astro:content';
 
 const disciplines = await getCollection('disciplines');
 ---
 
-<BaseLayout>
-  <PageHeader 
-    title="Nous contacter" 
-    backgroundImage="/uploads/contact-header-bg.webp"
-  />
-  
+<BaseLayout>  
   <!-- Contact Information -->
   <!-- <section class="py-16">
     <div class="container">

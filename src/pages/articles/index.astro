@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PageHeader from "../../components/Sections/PageHeader.astro";
 import Card from "../../components/UI/Card.astro";
 import { getCollection } from "astro:content";
 import { formatDate } from "../../utils/dateUtils";
@@ -22,12 +21,6 @@ const tags = [...new Set(posts.flatMap(post => post.data.tags))];
 <BaseLayout
   title="Articles"
 >
-  <PageHeader 
-    title="Articles" 
-    subtitle="Découvrez nos articles et ressources partagées"
-    backgroundImage="/uploads/articles-header-bg.webp"
-  />
-  
   <!-- Articles List -->
   <section class="py-16">
     <div class="container">

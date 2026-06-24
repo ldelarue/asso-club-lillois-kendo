@@ -20,7 +20,6 @@ const eventsCollection = defineCollection({
     title: z.string(),
     // Support both `startDate` (new) and `date` (legacy). Prefer `startDate`.
     startDate: z.date(), // Event start date
-    date: z.date().optional(), // Legacy alias for startDate
     endDate: z.date().optional(), // Event end date
     time: z.string().optional(), // e.g., "09:00 AM - 11:00 AM"
     location: z.string(),
@@ -28,7 +27,6 @@ const eventsCollection = defineCollection({
     summary: z.string(),
     tags: z.array(z.string()).optional(),
     registrationLink: z.string().url().optional(),
-    registrationRequired: z.boolean().default(false),
     draft: z.boolean().default(false),
   }),
 });

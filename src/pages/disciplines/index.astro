@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PageHeader from "../../components/Sections/PageHeader.astro";
 import { getCollection } from "astro:content";
 import Button from "../../components/UI/Button.astro";
 import JoinUs from "../../components/Sections/JoinUs.astro";
@@ -17,13 +16,6 @@ const ways = all.sort((a, b) =>
 ---
 
 <BaseLayout title="Nos disciplines" description="Quand on lui demanda combien de chemins mènent à l'illumination, le moine frappa dans un tas de sable. « Comptez, dit-il en souriant, et ajoutez d'autres grains. »">
-  <PageHeader
-    title="Nos disciplines" 
-    subtitle="Quand on lui demanda combien de chemins mènent à l'illumination, le moine frappa dans un tas de sable. « Comptez, dit-il en souriant, et ajoutez d'autres grains. »"
-    backgroundImage="/uploads/ministries-header-bg.webp"
-  />
-
-  <!-- Ministries Grid -->
   <section class="py-16 bg-primary-50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">

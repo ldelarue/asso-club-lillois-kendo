@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PageHeader from "../../components/Sections/PageHeader.astro";
 import Card from "../../components/UI/Card.astro";
 import { getCollection } from "astro:content";
 import { formatDate, isFutureDate, isPastDate } from "../../utils/dateUtils";
@@ -22,12 +21,6 @@ const pastEvents = allEvents.filter(event => isPastDate(event.data.startDate))
 <BaseLayout
   title="Évènements"
 >
-  <PageHeader 
-    title="Évènements" 
-    subtitle="Rejoignez-nous pour ces activités à venir"
-    backgroundImage="/uploads/evenements-headzer-bg.webp"
-  />
-  
   <!-- Upcoming Events -->
   <section class="py-16">
     <div class="container">
