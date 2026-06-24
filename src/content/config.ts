@@ -55,7 +55,7 @@ const articlesCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.date(),
-    description: z.string(), // Short description for previews
+    description: z.string().optional(),
     author: z.string().default("Church Staff"),
     image: z.union([
       z.string().startsWith('/uploads/'),

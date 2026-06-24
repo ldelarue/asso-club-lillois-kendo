@@ -5,7 +5,6 @@ title: Hello ! Je travaille sur ce site !
 draft: false
 tags:
   - web
-description: Message de bienvenue !
 image: /uploads/thank-you-bg.webp
 ---
 Bonjour !  

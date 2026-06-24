@@ -24,7 +24,7 @@ const ways = all.sort((a, b) =>
   />
 
   <!-- Ministries Grid -->
-  <section class="py-16 bg-gray-50">
+  <section class="py-16 bg-primary-50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Un Dojo, plusieurs Voies</h2>
@@ -37,11 +37,12 @@ const ways = all.sort((a, b) =>
         {ways.map(way => (
         <a
           href={`/disciplines/${way.slug}`}
-          class="
+          class="group
           g-white rounded-lg shadow 
           flex flex-col overflow-hidden 
           hover:shadow-lg transition
           min-h-[370px]
+          bg-white
           "
         >
             <!-- gambar fixed height 200px -->
@@ -50,7 +51,7 @@ const ways = all.sort((a, b) =>
                 <img
                   src={way.data.logo}
                   alt={way.data.name}
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-cover transform transition-transform duration-300 ease-out group-hover:scale-105"
                 />
               </div>
             )}
