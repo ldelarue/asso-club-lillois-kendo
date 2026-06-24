@@ -1,6 +1,6 @@
 ---
 author: Louis
-pubDate: 24/06/2026
+pubDate: 2026-06-24
 title: Hello ! Je travail sur ce site !
 draft: false
 tags:
