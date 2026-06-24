@@ -13,7 +13,12 @@
         "wednesday": "18h00-19h00",
         "saturday": "12h30-13h30"
       },
-      {}
+      {
+        "section": "Jodo",
+        "thursday": "20h00-21h30",
+        "friday": "20h00-21h45",
+        "saturday": "10h30-12h00"
+      }
     ]
   },
   "footer": {
