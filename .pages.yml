@@ -20,6 +20,7 @@ content:
     path: src/_data/schedules.json
     fields:
       - name: schedules
+        label: Horaires
         type: object
         list:
           collapsible: true
