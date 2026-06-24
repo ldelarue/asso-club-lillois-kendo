@@ -1,6 +1,6 @@
 ---
 name: "Olivier Bayart"
-title: "Professeur de Jodo"
+jobTitle: "Professeur de Jodo"
 image: "/uploads/staff/sarah-martinez.webp"
 phone: "0650731787"
 bio: "TODO"
