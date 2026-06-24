@@ -16,23 +16,28 @@ media:
 content:
   - name: schedules
     label: Horaires
-    type: collection
-    path: src/_data/schedules
+    type: file
+    path: src/_data/schedules.json
     fields:
-      - name: section
-        type: reference
-        options:
-          collection: disciplines
-          value: "{fields.name}"
-          label: "{fields.name}"
-      - { name: monday, label: lundi, type: string}
-      - { name: tuesday, label: mardi, type: string}
-      - { name: wednesday, label: mercredi, type: string}
-      - { name: thursday, label: jeudi, type: string}
-      - { name: friday, label: vendredi, type: string}
-      - { name: saturday, label: samedi, type: string}
-      - { name: sunday, label: dimanche, type: string}
-      - { name: comment, label: Commentaire, type: string}
+      - name: schedules
+        type: object
+        list:
+          collapsible: true
+        fields:
+          - name: section
+            type: reference
+            options:
+              collection: disciplines
+              value: "{fields.name}"
+              label: "{fields.name}"
+          - { name: monday, label: lundi, type: string}
+          - { name: tuesday, label: mardi, type: string}
+          - { name: wednesday, label: mercredi, type: string}
+          - { name: thursday, label: jeudi, type: string}
+          - { name: friday, label: vendredi, type: string}
+          - { name: saturday, label: samedi, type: string}
+          - { name: sunday, label: dimanche, type: string}
+          - { name: comment, label: Commentaire, type: string}
   - name: footer
     label: Bas-de-page
     type: file
