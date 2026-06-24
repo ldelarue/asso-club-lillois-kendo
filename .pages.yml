@@ -163,8 +163,8 @@ content:
     fields:
       - { name: title, label: Titre, type: string, required: true }
       - { name: draft, label: Brouillon, type: boolean, default: true }
-      - { name: startDate, label: Date de Début, type: date, required: true}
-      - { name: endDate, label: Date, type: date }
+      - { name: startDate, label: Date de début, type: date, required: true}
+      - { name: endDate, label: Date de fin, type: date }
       - { name: location, label: Lieu, type: string }
       - { name: description, label: Description, type: string }
       - { name: image, label: Illustration, type: image, required: true}
