@@ -96,8 +96,8 @@ content:
         type: reference
         options:
           collection: disciplines
-          value: "{primary}"
-          label: "{primary}"
+          value: "{name}"
+          label: "{name}"
       - { name: monday, label: lundi, type: string}
       - { name: tuesday, label: mardi, type: string}
       - { name: wednesday, label: mercredi, type: string}
