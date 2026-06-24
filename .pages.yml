@@ -159,7 +159,7 @@ content:
     type: collection
     path: src/content/events
     view:
-      fields: [ title, image, startDate , endDate, location, draft]
+      fields: [ startDate , endDate, title, image, location, draft]
     fields:
       - { name: title, label: Titre, type: string, required: true }
       - { name: draft, label: Brouillon, type: boolean, default: true }
@@ -177,7 +177,7 @@ content:
     type: collection
     path: src/content/articles
     view:
-      fields: [ title, image, pubDate, draft]
+      fields: [ pubDate, title, image, draft]
     fields:
       - { name: author, label: Auteur, type: string, required: true }
       - name: pubDate
