@@ -17,7 +17,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -95,3 +95,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create CalVer tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          date=$(date -u +"%Y.%m.%d.%H%M%S")
+          tag="calver-${date}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "$tag" -m "CalVer tag for $GITHUB_SHA"
+          git push origin "$tag"
+        
