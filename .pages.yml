@@ -39,51 +39,50 @@ content:
           - { name: saturday, label: samedi, type: string}
           - { name: sunday, label: dimanche, type: string}
           - { name: comment, label: Commentaire, type: string}
-  - name: footer
-    label: Bas-de-page
-    type: file
-    path: src/_data/footer.json
-    fields:
-      - name: addresses
-        label: Adresses web affiliées
+      - name: footer
+        label: Bas-de-page
         type: object
         fields:
-          - name: dojo
-            label: Dojo
-            type: string
-            required: true
-          - name: headquarters
-            label: Siège social
-            type: string
-            required: true
-      - name: other-websites
-        label: Sites web affiliés
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{label} {url} ({index})"
-        fields:
-          - name: label
-            type: string
-            required: true
-          - name: url
-            type: string
-            required: true
-      - name: links
-        label: Liens utiles
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{label} {url} ({index})"
-        fields:
-          - name: label
-            type: string
-            required: true
-          - name: url
-            type: string
-            required: true
+          - name: addresses
+            label: Adresses web affiliées
+            type: object
+            fields:
+              - name: dojo
+                label: Dojo
+                type: string
+                required: true
+              - name: headquarters
+                label: Siège social
+                type: string
+                required: true
+          - name: other-websites
+            label: Sites web affiliés
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label} {url} ({index})"
+            fields:
+              - name: label
+                type: string
+                required: true
+              - name: url
+                type: string
+                required: true
+          - name: links
+            label: Liens utiles
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label} {url} ({index})"
+            fields:
+              - name: label
+                type: string
+                required: true
+              - name: url
+                type: string
+                required: true
   - name: dojo
     label: Le Dojo
     type: file
