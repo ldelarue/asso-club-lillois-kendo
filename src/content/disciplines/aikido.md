@@ -4,7 +4,7 @@ slug: aikido
 logo: /uploads/disciplines/aïkido.jpg
 summary: L’Aïkido (合気道, « voie de la concordance des énergies ») est un art
   martial d’origine japonaise, créé par Morihei Ueshiba au milieu du XXe siècle.
-contact: Jean-Philippe Wahl
+coordinator: Jean-Philippe Wahl
 draft: false
 ---
 L’Aïkido est un art martial d’origine japonaise, créé par Morihei Ueshiba au milieu du XXe siècle.
