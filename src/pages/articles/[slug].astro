@@ -75,7 +75,7 @@ try {
     
     <!-- Social Sharing -->
     <div class="mt-12 py-6 border-t border-gray-200">
-      <h3 class="text-lg font-bold mb-4">Share This Post</h3>
+      <h3 class="text-lg font-bold mb-4">Partager cette article</h3>
       <div class="flex space-x-4">
         <a 
           href={`https://facebook.com/sharer/sharer.php?u=${Astro.url}`} 
@@ -130,18 +130,5 @@ try {
         </div>
       )
     }
-    
-    <!-- Navigation -->
-    <div class="mt-12">
-      <a 
-        href="/blog" 
-        class="inline-flex items-center text-primary-600 hover:text-primary-700"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-        </svg>
-        Back to All Posts
-      </a>
-    </div>
   </PostLayout>
 </BaseLayout>
