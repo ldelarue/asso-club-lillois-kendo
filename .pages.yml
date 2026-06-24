@@ -105,3 +105,4 @@ content:
       - { name: friday, label: vendredi, type: string}
       - { name: saturday, label: samedi, type: string}
       - { name: sunday, label: dimanche, type: string}
+      - { name: comment, label: Commentaire, type: string}
