@@ -6,6 +6,16 @@ import Button from "../components/UI/Button.astro";
 import JoinUs from "../components/Sections/JoinUs.astro";
 import PostList from "../components/Sections/PostList.astro";
 import siteData from "../content/siteData";
+import conf from "../_data/conf.json";
+// helper: split first word and the rest
+const splitFirst = (text) => {
+  if (!text) return { first: "", rest: "" };
+  const trimmed = String(text).trim();
+  const parts = trimmed.split(/\s+/);
+  const first = parts.shift() || "";
+  const rest = parts.join(" ");
+  return { first, rest };
+};
 ---
 
 <BaseLayout>
@@ -30,21 +40,21 @@ import siteData from "../content/siteData";
     <div class="container">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Horaires habituelles</h2>
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold mb-3">Kendo</h3>
-            <p class="text-2xl font-bold text-primary-600 mb-2">{siteData.schedules.kendo.time}</p>
-            <p class="text-gray-600 mb-4">{siteData.schedules.kendo.days}</p>
-            <p class="italic text-gray-500">{siteData.schedules.kendo.location}</p>
-          </div>
-          
-          <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold mb-3">Iaïdo</h3>
-            <p class="text-2xl font-bold text-primary-600 mb-2">{siteData.schedules.iaido.time}</p>
-            <p class="text-gray-600 mb-4">{siteData.schedules.iaido.days}</p>
-            <p class="italic text-gray-500">{siteData.schedules.iaido.location}</p>
-          </div>
+          {conf.home.schedules.map((s) => (
+            <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-3">{s.section}</h3>
+              {s.content.split('\n').map((line) => {
+                const { first, rest } = splitFirst(line);
+                return (
+                  <div class="grid grid-cols-2 gap-4 items-start mb-2">
+                    <div class="text-black font-medium">{first}</div>
+                    <div class="text-xl font-bold text-primary-600">{rest}</div>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
         </div>
       </div>
     </div>
