@@ -83,6 +83,19 @@ content:
               - name: url
                 type: string
                 required: true
+  - name: Staff
+    label: Staff
+    type: collection
+    path: src/content/staff
+    view:
+      fields: [ name ]
+    fields:
+      - { name: name, label: Nom, type: string, required: true }
+      - { name: jobTitle, label: Fonction, type: string, required: true }
+      - { name: image, label: Nom, type: image }
+      - { name: email, label: Nom, type: string }
+      - { name: tel, label: Nom, type: string }
+      - { name: bio, label: bio, type: rich-text}
   - name: dojo
     label: Le Dojo
     type: file
