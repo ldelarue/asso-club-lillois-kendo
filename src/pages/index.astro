@@ -8,7 +8,7 @@ import PostList from "../components/Sections/PostList.astro";
 import siteData from "../content/siteData";
 import conf from "../_data/conf.json";
 // helper: split first word and the rest
-const splitFirst = (text) => {
+const splitFirst = (text: string) => {
   if (!text) return { first: "", rest: "" };
   const trimmed = String(text).trim();
   const parts = trimmed.split(/\s+/);
@@ -42,7 +42,7 @@ const splitFirst = (text) => {
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Horaires habituelles</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {conf.home.schedules.map((s) => (
-            <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
               <h3 class="text-xl font-bold mb-3">{s.section}</h3>
               {s.content.split('\n').map((line) => {
                 const { first, rest } = splitFirst(line);
@@ -53,9 +53,13 @@ const splitFirst = (text) => {
                   </div>
                 );
               })}
+              {s.comment ? (
+                <p class="text-sm italic text-gray-500 mt-4">{s.comment}</p>
+              ) : null}
             </div>
           ))}
         </div>
+        
       </div>
     </div>
   </section>
@@ -179,11 +183,11 @@ const splitFirst = (text) => {
           // Handle newsletter form submission
           document.getElementById('newsletter-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // In a real implementation, you would handle the form submission here
             // For this template, we'll just show a success message
             alert('Thank you for subscribing to our newsletter!');
-            this.reset();
+            (e.currentTarget as HTMLFormElement).reset();
           });
         </script>
       </div>
