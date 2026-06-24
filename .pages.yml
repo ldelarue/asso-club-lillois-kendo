@@ -125,6 +125,7 @@ content:
         type: reference
         options:
           collection: staff
+          required: true
       - { name: draft, label: Brouillon, type: boolean }
       - { name: body, label: Contenu, type: rich-text }
   - name: sign-up
