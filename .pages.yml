@@ -29,6 +29,7 @@ content:
           fields:
             - name: section
               type: reference
+              label: Section
               options:
                 collection: disciplines
                 value: "{fields.name}"
