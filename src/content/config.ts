@@ -24,7 +24,7 @@ const eventsCollection = defineCollection({
     time: z.string().optional(), // e.g., "09:00 AM - 11:00 AM"
     location: z.string(),
     image: z.string(),
-    summary: z.string(),
+    summary: z.string().optional(),
     tags: z.array(z.string()).optional(),
     registrationLink: z.string().url().optional(),
     draft: z.boolean().default(false),
