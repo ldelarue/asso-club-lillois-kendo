@@ -3,35 +3,19 @@
     "schedules": [
       {
         "section": "Aïkido",
-        "monday": "19h30-21h30",
-        "thursday": "19h30-21h30",
-        "friday": "19h30-21h30"
+        "content": "Lundi 19h30-21h30         Jeudi 19h30-21h30         Vendredi 19h30-21h30"
       },
       {
-        "section": "Iaïdo",
-        "monday": "12h30-13h30",
-        "wednesday": "18h00-19h00",
-        "saturday": "12h30-13h30"
+        "section": "Iaïdo"
       },
       {
-        "section": "Jodo",
-        "thursday": "20h00-21h30",
-        "friday": "20h00-21h45",
-        "saturday": "10h30-12h00"
+        "section": "Jodo"
       },
       {
-        "section": "Judo",
-        "wednesday": "16h00-17h30",
-        "saturday": "14h00-15h30"
+        "section": "Judo"
       },
       {
-        "section": "Kendo",
-        "tuesday": "18h00-20h00",
-        "wednesday": "19h00-20h00",
-        "thursday": "12h00-13h30 | 18h00-20h00",
-        "friday": "12h00-13h30 ",
-        "saturday": "17h30-19h00",
-        "sunday": "11h00-12h30"
+        "section": "Kendo"
       }
     ]
   },
