@@ -33,37 +33,6 @@ const eventsCollection = defineCollection({
   }),
 });
 
-const sermonsCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    slug: z.string().optional(), // Auto-generated if not provided
-    date: z.date(),
-    speaker: z.string(),
-    series: z.string().optional(),
-    scripture: z.string().optional(),
-    audioUrl: z.string().url().optional(),
-    videoUrl: z.string().url().optional(),
-    image: z.string().startsWith('/uploads/sermons/').optional(), // Thumbnail
-    summary: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    draft: z.boolean().default(false),
-  }),
-});
-
-// const ministriesCollection = defineCollection({
-//   type: 'content',
-//   schema: z.object({
-//     name: z.string(),
-//     logo: z.string().startsWith('/uploads/ministries/').optional(),
-//     summary: z.string(),
-//     coordinator: z.string().optional(),
-//     contact: z.string().optional(), // Email or text
-//     schedule: z.string().optional(),
-//     order: z.number().optional(),
-//     draft: z.boolean().default(false),
-//   }),
-// });
 
 const disciplinesCollection = defineCollection({
   type: 'content',
@@ -79,28 +48,12 @@ const disciplinesCollection = defineCollection({
   }),
 });
 
-const blogCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    slug: z.string().optional(),
-    pubDate: z.date(),
-    description: z.string(), // Short description for previews
-    author: z.string().default("Church Staff"),
-    image: z.object({
-      url: z.string().startsWith('/uploads/blog/'),
-      alt: z.string()
-    }).optional(),
-    tags: z.array(z.string()).default(["general"]),
-    draft: z.boolean().default(false),
-  }),
-});
+
 
 const articlesCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    slug: z.string().optional(),
     pubDate: z.date(),
     description: z.string(), // Short description for previews
     author: z.string().default("Church Staff"),
@@ -116,20 +69,6 @@ const articlesCollection = defineCollection({
   }),
 });
 
-const postCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    slug: z.string().optional(),
-    pubDate: z.date(),
-    description: z.string(), // Short description for previews
-    author: z.string().default("Administrateur"),
-    // Use the same simple uploaded path format, under `/uploads/posts/`
-    image: z.string().startsWith('/uploads/posts/').optional(),
-    tags: z.array(z.string()).default(["general"]),
-    draft: z.boolean().default(false),
-  }),
-});
 
 const siteInfoCollection = defineCollection({
   type: 'content', // Could be 'data' if only frontmatter is needed
@@ -141,11 +80,7 @@ const siteInfoCollection = defineCollection({
 export const collections = {
   staff: staffCollection,
   events: eventsCollection,
-  sermons: sermonsCollection,
-  // ministries: ministriesCollection,
   disciplines: disciplinesCollection,
-  blog: blogCollection,
   articles: articlesCollection,
-  post: postCollection,
   siteInfo: siteInfoCollection,
 };
