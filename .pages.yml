@@ -128,8 +128,8 @@ content:
       - { name: slug, label: Slug, type: string }
       - { name: logo, label: Logo, type: image }
       - { name: summary, label: Description, type: string, required: true }
-      - name: contact
-        label: Contact
+      - name: coordinator
+        label: Coordinateur
         type: reference
         options:
           collection: staff
