@@ -14,6 +14,25 @@ media:
     input: public/resources
     output: /web-resources
 content:
+  - name: schedules
+    label: Horaires
+    type: file
+    path: src/_data/schedules.json
+    fields:
+      - name: section
+        type: reference
+        options:
+          collection: disciplines
+          value: "{fields.name}"
+          label: "{fields.name}"
+      - { name: monday, label: lundi, type: string}
+      - { name: tuesday, label: mardi, type: string}
+      - { name: wednesday, label: mercredi, type: string}
+      - { name: thursday, label: jeudi, type: string}
+      - { name: friday, label: vendredi, type: string}
+      - { name: saturday, label: samedi, type: string}
+      - { name: sunday, label: dimanche, type: string}
+      - { name: comment, label: Commentaire, type: string}
   - name: dojo
     label: Le Dojo
     type: file
@@ -87,22 +106,3 @@ content:
       - { name: description, label: Description, type: string}
       - { name: image, label: Illustration, type: image, required: true}
       - { name: body, label: Contenu, type: rich-text, required: true }
-  - name: schedules
-    label: Horaires
-    type: file
-    path: src/_data/schedules.json
-    fields:
-      - name: section
-        type: reference
-        options:
-          collection: disciplines
-          value: "{fields.name}"
-          label: "{fields.name}"
-      - { name: monday, label: lundi, type: string}
-      - { name: tuesday, label: mardi, type: string}
-      - { name: wednesday, label: mercredi, type: string}
-      - { name: thursday, label: jeudi, type: string}
-      - { name: friday, label: vendredi, type: string}
-      - { name: saturday, label: samedi, type: string}
-      - { name: sunday, label: dimanche, type: string}
-      - { name: comment, label: Commentaire, type: string}
