@@ -1,7 +1,7 @@
 ---
 author: Louis
 pubDate: 2026-06-24
-title: Hello ! Je travail sur ce site !
+title: Hello ! Je travaille sur ce site !
 draft: false
 tags:
   - web
