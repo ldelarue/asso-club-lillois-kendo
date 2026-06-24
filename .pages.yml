@@ -126,6 +126,8 @@ content:
         options:
           collection: staff
           required: true
+          value: "{fields.name}"
+          label: "{fields.name}"
       - { name: draft, label: Brouillon, type: boolean }
       - { name: body, label: Contenu, type: rich-text }
   - name: sign-up
