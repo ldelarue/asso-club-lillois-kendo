@@ -150,6 +150,7 @@ content:
           Sélectionner le PDF d'inscription
         type: file
         options:
+          media: documents
           path: public/uploads/inscriptions
           extensions: [pdf]
   - name: events
