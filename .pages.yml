@@ -16,79 +16,82 @@ content:
     type: file
     path: src/_data/conf.json
     fields:
-      - name: schedules
-        label: Horaires
-        type: object
-        list:
-          collapsible: true
-        fields:
-          - name: section
-            type: reference
-            options:
-              collection: disciplines
-              value: "{fields.name}"
-              label: "{fields.name}"
-          - { name: monday, label: lundi, type: string}
-          - { name: tuesday, label: mardi, type: string}
-          - { name: wednesday, label: mercredi, type: string}
-          - { name: thursday, label: jeudi, type: string}
-          - { name: friday, label: vendredi, type: string}
-          - { name: saturday, label: samedi, type: string}
-          - { name: sunday, label: dimanche, type: string}
-          - { name: comment, label: Commentaire, type: string}
-      - name: footer
-        label: Bas-de-page
-        type: object
-        fields:
-          - name: addresses
-            label: Adresses web affiliées
-            type: object
-            fields:
-              - name: dojo
-                label: Dojo
-                type: string
-                required: true
-              - name: headquarters
-                label: Siège social
-                type: string
-                required: true
-          - name: other-websites
-            label: Sites web affiliés
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{label} / {url}"
-            fields:
-              - name: label
-                type: string
-                required: true
-              - name: url
-                type: string
-                required: true
-          - name: links
-            label: Liens utiles
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{label} / {url}"
-            fields:
-              - name: label
-                type: string
-                required: true
-              - name: url
-                type: string
-                required: true
-          - name: facebook-link
-            label: Lien Facebook
-            type: string
-          - name: instagram-link
-            label: Lien Instagram
-            type: string
-          - name: youtube-link
-            label: Lien Youtube
-            type: string
+    - name: home
+      label: Accueil
+      fields:
+        - name: schedules
+          label: Horaires
+          type: object
+          list:
+            collapsible: true
+          fields:
+            - name: section
+              type: reference
+              options:
+                collection: disciplines
+                value: "{fields.name}"
+                label: "{fields.name}"
+            - { name: monday, label: lundi, type: string}
+            - { name: tuesday, label: mardi, type: string}
+            - { name: wednesday, label: mercredi, type: string}
+            - { name: thursday, label: jeudi, type: string}
+            - { name: friday, label: vendredi, type: string}
+            - { name: saturday, label: samedi, type: string}
+            - { name: sunday, label: dimanche, type: string}
+            - { name: comment, label: Commentaire, type: string}
+    - name: footer
+      label: Bas-de-page
+      type: object
+      fields:
+        - name: addresses
+          label: Adresses web affiliées
+          type: object
+          fields:
+            - name: dojo
+              label: Dojo
+              type: string
+              required: true
+            - name: headquarters
+              label: Siège social
+              type: string
+              required: true
+        - name: other-websites
+          label: Sites web affiliés
+          type: object
+          list:
+            collapsible:
+              collapsed: true
+              summary: "{label} / {url}"
+          fields:
+            - name: label
+              type: string
+              required: true
+            - name: url
+              type: string
+              required: true
+        - name: links
+          label: Liens utiles
+          type: object
+          list:
+            collapsible:
+              collapsed: true
+              summary: "{label} / {url}"
+          fields:
+            - name: label
+              type: string
+              required: true
+            - name: url
+              type: string
+              required: true
+        - name: facebook-link
+          label: Lien Facebook
+          type: string
+        - name: instagram-link
+          label: Lien Instagram
+          type: string
+        - name: youtube-link
+          label: Lien Youtube
+          type: string
   - name: staff
     label: Staff
     type: collection
