@@ -82,7 +82,6 @@ content:
         type: date
         default: ""
         options:
-          time: true
           format: dd/MM/yyyy
       - { name: title, label: Titre, type: string, required: true }
       - { name: draft, label: Brouillon, type: boolean }
