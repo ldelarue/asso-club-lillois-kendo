@@ -1,4 +1,12 @@
 {
+  "schedules": [
+    {
+      "section": "Aïkido",
+      "monday": "19h30-21h30",
+      "thursday": "19h30-21h30",
+      "friday": "19h30-21h30"
+    }
+  ],
   "footer": {
     "addresses": {
       "dojo": "Salle de sport, Gare Saint Sauveur, Lille",
