@@ -5,7 +5,7 @@ logo: /uploads/disciplines/iaïdo.jpg
 summary: Le Iaï (居合道, « voie de la vie en harmonie ») est l’étude du maniement
   du Katana. Les écoles étudiées sont le Muso Shinden Ryu Iaïdo et Iaï Jutsu. La
   base de la pratique est le Iaïdo de la Fédération japonaise de Kendo.
-contact: Patrick Vigneau
+coordinator: Patrick Vigneau
 draft: false
 ---
 ## En quelques mots
