@@ -122,7 +122,7 @@ content:
     type: collection
     path: src/content/disciplines
     view:
-      fields: [ name, logo, contact, draft ]
+      fields: [ name, logo, coordinator, contact, draft ]
     fields:
       - { name: name, label: Nom, type: string, required: true }
       - { name: slug, label: Slug, type: string }
