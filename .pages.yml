@@ -96,7 +96,8 @@ content:
         type: reference
         options:
           collection: disciplines
-          search: "name"
+          value: "{name}"
+          label: "{nom}"
       - { name: monday, label: lundi, type: string}
       - { name: tuesday, label: mardi, type: string}
       - { name: wednesday, label: mercredi, type: string}
